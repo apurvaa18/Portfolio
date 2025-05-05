@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+/* Header Section */
+#header {
+    width: 100%;
+    height: 100vh;
+    display: flex;  /* Align text and background image side by side */
+    align-items: center;
+    justify-content: flex-start; /* Keep text on the left */
+    padding: 0 10%;
+    background: url('Images/MY.jpg') no-repeat; 
+    background-size: contain; /* Adjust the image size to fit without cropping */
+    background-position: right center; /* Position the image on the right */
+}
+
+/* Styling the text */
+.header-text {
+    max-width: 50%;  /* Keep the text on the left */
+    z-index: 2;  
+}
+
+.header-text h1 {
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.header-text p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Style the logo */
+.logo {
+    width: 150px; /* Adjust logo size */
+    height: auto;
+}
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align menu to the right */
+    align-items: center;
+    position: absolute; /* Position nav over the header */
+    top: 20px; /* Add spacing from the top */
+    right: 40px; /* Push to the rightmost side */
+    z-index: 3; /* Ensure the menu appears above the content */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between nav items */
+    margin-left: auto; /* Pushes the list to the right */
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a {
+    position: relative; /* Required for absolute positioning of ::after */
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+#about {
+    padding: 50px 0;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the top */
+    justify-content: center; /* Centers content */
+    gap: 50px; /* Adds space between image and text */
+}
+
+/* Reduce image size */
+.about-col-1 img {
+    width: 400px; /* Adjust size as needed */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Align text to the right of the image */
+.about-col-2 {
+    flex: 1; /* Allows text to take remaining space */
+    text-align: left;
+}
+
+.about-col-2 h1 {
+    font-size: 40px;
+    color: white;
+    margin: 0; /* Removes extra space */
+}
+
+.about-col-2 p {
+    font-size: 20px;
+    color: white;
+    line-height: 1.6;
+    margin-top: 10px; /* Adjust spacing */
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 23px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s; 
+}
+.tab-links.active-link::after, 
+.tab-links:hover::after {
+    width: 100%;
+}
+
+.tab-contents ul li{
+    font-size: 17px;
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    font-size: 19px;
+    color: #b54769;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* Services */
+
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
